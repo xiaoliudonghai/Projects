@@ -17,10 +17,8 @@
             android:name=".ui.SpecialDetailsActivity"
             android:label="@string/title_activity_special_details"
             ></activity>
-        <activity
-            android:name=".MainActivity"
-           >
-        android:theme="@style/NoAppTheme.">
+        
+           
         <activity android:name=".ui.SearchActivity"></activity>
         <activity
             android:name=".MainActivity"

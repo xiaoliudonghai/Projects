@@ -1,6 +1,6 @@
 package com.example.shopping_mall.apis;
 
-import com.example.shopping_mall.bean.SpecialBean;
+import com.example.shopping_mall.bean.BannerBean;
 import com.example.shopping_mall.bean.SpecialDetailsBean;
 import com.example.shopping_mall.bean.SpecialDetailsXiangBean;
 import com.example.shopping_mall.bean.ClassifyTabBean;
@@ -10,19 +10,21 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface MyApi {
-    //ä¸“é¢˜çš„åˆ—è¡¨
-    @GET("topic/list")
-    Flowable<SpecialBean> getSpecial();
-    //ä¸“é¢˜çš„è¯¦æƒ…
-    @GET("topic/detail")
-    Flowable<SpecialDetailsBean> getSpecialDetails(@Query("id") int id);
-    //ç›¸å…³ä¸“é¢˜
-    @GET("topic/related")
-    Flowable<SpecialDetailsXiangBean> getSpecialDetailsXiang(@Query("id") int id);
-    @GET("banner/json")
-    Flowable<BannerBean> getHomePage();
+	//×¨ÌâµÄÁĞ±í
+	@GET("topic/list")
+	Flowable<SpecialBean> getSpecial();
+	//×¨ÌâµÄÏêÇé
+	@GET("topic/detail")
+	Flowable<SpecialDetailsBean> getSpecialDetails(@Query("id") int id);
+	//Ïà¹Ø×¨Ìâ
+	@GET("topic/related")
+	Flowable<SpecialDetailsXiangBean> getSpecialDetailsXiang(@Query("id") int id);
+	@GET("banner/json")
+	Flowable<BannerBean> getHomePage();
 
-    //åˆ†ç±»tablayoutæ¥å£
-    @GET("catalog/index")
-    Flowable<ClassifyTabBean> classifybean();
+	//·ÖÀàtablayout½Ó¿Ú
+	@GET("catalog/index")
+	Flowable<ClassifyTabBean> classifybean();
+	@GET("index/index")
+	Flowable<HomePageBean> getHomePage();
 }
