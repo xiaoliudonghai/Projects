@@ -1,14 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.ClassifyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/y5"
+        android:layout_width="@dimen/x300"
+        android:layout_height="@dimen/y30"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+       android:background="@drawable/search_shape"
+        >
+        <ImageView
+            android:id="@+id/Image"
+            android:layout_marginLeft="@dimen/y20"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_action_action_search"
+            android:layout_width="@dimen/x30"
+            android:layout_height="@dimen/y20"
+            />
+        <EditText
+            android:id="@+id/Ed_name"
+            android:background="@drawable/search_shape"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/search_text"
+            />
+    </LinearLayout>
+    </FrameLayout>
+
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_below="@id/frame"
+        >
+        <RelativeLayout
+            android:background="@drawable/tag_shapes"
+            android:layout_marginLeft="@dimen/y10"
+            android:layout_marginTop="@dimen/y10"
+            android:id="@+id/Relay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+        <TextView
+            android:gravity="center"
+            android:id="@+id/txt"
+            android:layout_width="@dimen/x70"
+            android:layout_height="wrap_content"
+            android:text="@string/Tab_text"
+            android:textColor="@color/black"
+            />
+        <q.rorbin.verticaltablayout.VerticalTabLayout
+            android:id="@+id/vertical"
+            android:layout_width="@dimen/x70"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fitsSystemWindows="true"
+            android:scrollIndicators="bottom"
+            app:indicator_gravity="left"
+            app:indicator_width="0dp"
+            app:tab_height="50dp"
+            app:tab_mode="scrollable"
+            android:layout_below="@id/txt"
+            >
+        </q.rorbin.verticaltablayout.VerticalTabLayout>
+        </RelativeLayout>
 
-</FrameLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginRight="@dimen/x10"
+            android:background="@drawable/tag_shapes"
+            android:layout_toRightOf="@id/Relay"
+            android:layout_marginLeft="@dimen/y10"
+            android:layout_marginTop="@dimen/y10"
+            android:id="@+id/Recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
