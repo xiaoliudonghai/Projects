@@ -4,4 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_special_details">SpecialDetailsActivity</string>
+    <string name="search_text">商品搜索，共239款好物</string>
+    <string name="Tab_text">推荐</string>
+
 </resources>

@@ -49,6 +49,7 @@ public abstract class BaseMvpFragment<V extends IBaseView,P extends IPersenter> 
 
     //初始化数据
     protected  void initData(){};
+    protected  void initView(){};
     //创建p
     protected abstract P createPersenter();
 

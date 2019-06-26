@@ -3,6 +3,7 @@ package com.example.shopping_mall.apis;
 import com.example.shopping_mall.bean.SpecialBean;
 import com.example.shopping_mall.bean.SpecialDetailsBean;
 import com.example.shopping_mall.bean.SpecialDetailsXiangBean;
+import com.example.shopping_mall.bean.ClassifyTabBean;
 
 import io.reactivex.Flowable;
 import retrofit2.http.GET;
@@ -18,4 +19,10 @@ public interface MyApi {
     //相关专题
     @GET("topic/related")
     Flowable<SpecialDetailsXiangBean> getSpecialDetailsXiang(@Query("id") int id);
+    @GET("banner/json")
+    Flowable<BannerBean> getHomePage();
+
+    //分类tablayout接口
+    @GET("catalog/index")
+    Flowable<ClassifyTabBean> classifybean();
 }
