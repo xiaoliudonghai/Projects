@@ -1,11 +1,12 @@
+
 <resources>
     <string name="app_name">Shopping_Mall</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_special_details">SpecialDetailsActivity</string>
-    <string name="search_text">ÉÌÆ·ËÑË÷£¬¹²239¿îºÃÎï</string>
-    <string name="Tab_text">ÍÆ¼ö</string>
+    <string name="search_text">å•†å“æœç´¢ï¼Œå…±239æ¬¾å¥½ç‰©</string>
+    <string name="Tab_text">æ¨è</string>
 
 
 </resources>
