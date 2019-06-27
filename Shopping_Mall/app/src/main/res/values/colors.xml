@@ -13,4 +13,7 @@
     <color name="white">#fff</color>
     <color name="orange">#f7811a</color>
 
+    <color name="ShopCarBackground">#DEDADA</color>
+    <color name="ShopXiadanBackground">#B4282D</color>
+    <color name="Shoptextcolor">#393939</color>
 </resources>

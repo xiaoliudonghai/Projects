@@ -8,4 +8,12 @@
     <string name="Tab_text">推荐</string>
 
 
+    <string name="ShopCar1">30天无忧退货</string>
+    <string name="ShopCar2">48小时快速退款</string>
+    <string name="ShopCar3">满88元免邮费</string>
+    <string name="All">全选</string>
+    <string name="AllCount">()</string>
+    <string name="Allprice">￥</string>
+    <string name="edit">编辑</string>
+    <string name="Xiadan">下单</string>
 </resources>
