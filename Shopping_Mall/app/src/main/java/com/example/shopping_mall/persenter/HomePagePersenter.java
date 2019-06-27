@@ -11,12 +11,12 @@ import com.example.shopping_mall.utils.RxUtils;
 public class HomePagePersenter extends BasePersenter<HomePageContract.View> implements HomePageContract.Presenter {
     @Override
     public void getIndex() {
-        addSubscribe(HttpManager.getMyApi().getHomePage().compose(RxUtils.<BannerBean>rxScheduler())
-                .subscribeWith(new CommonSubscriber<BannerBean>(myView) {
-                    @Override
-                    public void onNext(BannerBean homePageBean) {
-                        myView.getIndexReturn(homePageBean);
-                    }
-                }));
+//        addSubscribe(HttpManager.getMyApi().getHomePage().compose(RxUtils.<BannerBean>rxScheduler())
+//                .subscribeWith(new CommonSubscriber<BannerBean>(myView) {
+//                    @Override
+//                    public void onNext(BannerBean homePageBean) {
+//                        myView.getIndexReturn(homePageBean);
+//                    }
+//                }));
     }
 }
