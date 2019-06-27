@@ -11,16 +11,8 @@ import com.example.shopping_mall.interfaces.bontract.SpecialDetailsContract;
 import com.example.shopping_mall.utils.RxUtils;
 
 public class SpecialDetailsPersenter extends BasePersenter<SpecialDetailsContract.View> implements SpecialDetailsContract.Presenter {
-    @Override
-    public void getIndex(int id) {
-        addSubscribe(HttpManager.getMyApi().getSpecialDetails(id).compose(RxUtils.<SpecialDetailsBean>rxScheduler())
-                .subscribeWith(new CommonSubscriber<SpecialDetailsBean>(myView) {
-                    @Override
-                    public void onNext(SpecialDetailsBean sou) {
-                        myView.getIndexReturn(sou);
-                    }
-                }));
-    }
+
+
 
     @Override
     public void getDetailsIndex(int id) {

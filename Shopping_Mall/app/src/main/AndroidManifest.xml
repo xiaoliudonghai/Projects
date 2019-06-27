@@ -13,13 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/NoAppTheme.">
+        <activity android:name=".ui.SpcialDetails1Activity"></activity>
         <activity
             android:name=".ui.SpecialDetailsActivity"
-            android:label="@string/title_activity_special_details"
-            ></activity>
-        
-           
-        <activity android:name=".ui.SearchActivity"></activity>
+            android:label="@string/title_activity_special_details" />
+        <activity android:name=".ui.SearchActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/NoAppTheme.">

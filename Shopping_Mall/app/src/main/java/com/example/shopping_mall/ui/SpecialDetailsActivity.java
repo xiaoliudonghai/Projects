@@ -27,7 +27,6 @@ public class SpecialDetailsActivity extends BaseMvpActivity implements SpecialDe
     @BindView(R.id.toob_Special)
     Toolbar toobSpecial;
     private int id;
-    private ArrayList<SpecialDetailsBean.DataBean> list;
     private ArrayList<SpecialDetailsXiangBean.DataBean> lists;
     private SpecialDetailsAdapter base;
 
@@ -46,28 +45,17 @@ public class SpecialDetailsActivity extends BaseMvpActivity implements SpecialDe
         super.initView();
         toobSpecial.setTitle("");
         setSupportActionBar(toobSpecial);
-
         id = getIntent().getIntExtra("id", 0);
-        list = new ArrayList<>();
         lists = new ArrayList<>();
         RlvSpecialDetails.setLayoutManager(new LinearLayoutManager(this));
-        base = new SpecialDetailsAdapter(list, lists, this);
+        base = new SpecialDetailsAdapter( lists, this);
         RlvSpecialDetails.setAdapter(base);
     }
 
     @Override
     protected void initData() {
         super.initData();
-        ((SpecialDetailsPersenter) myPersenter).getIndex(id);
         ((SpecialDetailsPersenter) myPersenter).getDetailsIndex(id);
-    }
-
-    @Override
-    public void getIndexReturn(SpecialDetailsBean specialDetailsBean) {
-        if (specialDetailsBean != null) {
-            list.add(specialDetailsBean.getData());
-            base.notifyDataSetChanged();
-        }
     }
 
     @Override
@@ -78,9 +66,4 @@ public class SpecialDetailsActivity extends BaseMvpActivity implements SpecialDe
         }
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        id=0;
-    }
 }

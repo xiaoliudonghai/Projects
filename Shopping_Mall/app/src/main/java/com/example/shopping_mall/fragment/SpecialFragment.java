@@ -17,6 +17,7 @@ import com.example.shopping_mall.bean.SpecialBean;
 import com.example.shopping_mall.interfaces.IPersenter;
 import com.example.shopping_mall.interfaces.bontract.SpecialContract;
 import com.example.shopping_mall.persenter.SpecialPersenter;
+import com.example.shopping_mall.ui.SpcialDetails1Activity;
 import com.example.shopping_mall.ui.SpecialDetailsActivity;
 
 import java.util.ArrayList;
@@ -62,7 +63,7 @@ public class SpecialFragment extends BaseMvpFragment implements SpecialContract.
         specialAdapter.setClick(new SpecialAdapter.Click() {
             @Override
             public void click(int id) {
-                Intent intent = new Intent(getActivity(), SpecialDetailsActivity.class);
+                Intent intent = new Intent(getActivity(), SpcialDetails1Activity.class);
                 intent.putExtra("id",id);
                 startActivity(intent);
             }
